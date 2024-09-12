@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    /* Cores NAV*/
+    --cor-textoLogo: rgba(58, 64, 78, 1);
+    --cor-linkNav: rgba(102, 112, 133, 1);
+    --cor-botaoNav: rgba(142, 36, 36, 1);
+    --cor-textoBotaoNav: white;
+    
+    /* Cores Cabecalho */
+    --cor-cabecalholink: rgba(142, 36, 36, 1);
+    --cor-cabecalhoTitulo: black;
+    --cor-cabecalhoDescricao: rgba(102, 112, 133, 1);
+    
+    /* Cores Metricas MAIN*/
+    --cor-metricasTitulo: rgba(142, 36, 36, 1);
+    --cor-metricasDescricao: rgba(102, 112, 133, 1);
+    
+
+
+    --fonte: "Inter", sans-serif;
+}
+
+body{
+    margin: 0; padding: 0;
+}
+
+/* NAV-BAR */
+#nav-bar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar > header{
+    text-align: center;
+}
+
+#nav-bar-container{
+    width: 1280px; height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+    
+}
+
+/* Logo */
+#logo{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+}
+
+#logo > span{
+    font-family: var(--fonte);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: var(--cor-textoLogo);
+}
+
+/* Links de navegação*/
+
+#nav-bar-links{
+    width: 400px; height: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#nav-bar-links > button{
+    height: 32px;
+    padding: 4px 0px;
+    background-color: transparent;
+    border: 0;
+}
+
+#nav-bar-links > button > a{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--cor-linkNav);
+}
+
+/* Botões LOGIN*/
+
+#nav-bar-login{
+    width: 207px; height: 44px;
+    display: flex;
+    gap: 12px;
+}
+
+#nav-bar-login > #entrar{
+    width: 83px; height: 44px;
+    padding: 10px 18px;
+    display: flex;
+    gap: 8px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: var(--cor-linkNav);
+    cursor: pointer;
+}
+
+#nav-bar-login > #cadastrar{
+    width: 112px; height: 44px;
+    padding: 10px 18px;
+    display: flex;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-botaoNav);
+    background-color: var(--cor-botaoNav);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--cor-textoBotaoNav);
+    cursor: pointer;
+}
+
+/* Sobre nós */
+
+#cabecalho{
+    padding: 96px 0px 96px 0 ;
+    display: grid;
+    gap: 24px;
+    text-align: center;
+}
+
+.link{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--cor-cabecalholink);
+}
+
+#cabecalho-titulo{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    color: var(--cor-cabecalhoTitulo);
+}
+
+#cabecalho-container-descricao{
+    display: flex;
+    justify-content: center;
+}
+
+#cabecalho-descricao{
+    width: 791px; height: 60px;
+    font-family: var(--fonte);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--cor-cabecalhoDescricao);
+}
+
+/* SESSÃO -- METRICAS */
+
+#metricas{
+    height: 288px;
+    display: flex;
+    justify-content: center;
+}
+
+#metrica-container{
+    padding: 0 32px;
+    display: flex;
+    gap: 64px;
+}
+
+#metrica-lista{
+    height: 192px;
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+}
+
+.item{
+    width: 280px;
+    height: 168px;
+    display: grid;
+    gap: 12px;
+}
+
+.item-titulo{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--cor-metricasTitulo);
+}
+
+.item-subtitulo{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+}
+
+.item-descricao{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--cor-metricasDescricao);
+}
+
+/* Vagas MAIN*/
+
+#vagas{
+    padding: 96px 0;
+    height: 1798px;
+    display: grid;
+    justify-content: center;
+}
