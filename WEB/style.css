@@ -10,19 +10,24 @@
     
     /* Cores Cabecalho */
     --cor-cabecalholink: rgba(142, 36, 36, 1);
-    --cor-cabecalhoTitulo: black;
+    --cor-cabecalhoTitulo: rgba(16, 24, 40, 1);
     --cor-cabecalhoDescricao: rgba(102, 112, 133, 1);
     
     /* Cores Metricas MAIN*/
+    --cor-metricaslink: rgba(16, 24, 40, 1);
     --cor-metricasTitulo: rgba(142, 36, 36, 1);
     --cor-metricasDescricao: rgba(102, 112, 133, 1);
     
-
+     /* Cores vagas */
+     --cor-vagaslink: rgba(142, 36, 36, 1);
+     --cor-vagasTitulo: rgba(16, 24, 40, 1);
+     --cor-vagasDescricao: rgba(102, 112, 133, 1);
+     --cor-vagasDescricao2: rgba(16, 24, 40, 1);
 
     --fonte: "Inter", sans-serif;
 }
 
-body{
+*{
     margin: 0; padding: 0;
 }
 
@@ -36,15 +41,13 @@ body{
 
 #nav-bar > header{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 #nav-bar-container{
-    width: 1280px; height: 44px;
+    height: 44px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0px 32px;
     
@@ -164,6 +167,7 @@ body{
 
 #cabecalho-container-descricao{
     display: flex;
+    gap: 24px;
     justify-content: center;
 }
 
@@ -180,29 +184,31 @@ body{
 
 #metricas{
     height: 288px;
-    display: flex;
-    justify-content: center;
+    display: grid;
 }
 
 #metrica-container{
-    padding: 0 32px;
+    height: 192px; width: 100%;
     display: flex;
+    justify-content: center;
     gap: 64px;
 }
 
 #metrica-lista{
-    height: 192px;
+    height: 192px; width: 1280px;
+    margin: 0; padding: 0 32px;
     display: flex;
+    justify-content: space-evenly;
     gap: 32px;
     list-style: none;
-    margin: 0;
 }
 
 .item{
-    width: 280px;
+    min-width: 280px; max-width: 300px;
     height: 168px;
     display: grid;
     gap: 12px;
+    
 }
 
 .item-titulo{
@@ -237,12 +243,24 @@ body{
 
 /* Vagas MAIN*/
 
+/* VAGAS - TALENTOS*/
 #vagas{
-    text-align: center;
     padding: 96px 0;
-    height: 1798px;
     display: grid;
+    gap: 64px;
     justify-content: center;
+    text-align: center;
+}
+    
+
+#vagas-talentos > picture {
+    display: block;
+    height: 400px;
+    margin-top: 64px;
+}
+
+#vagas-talentos > picture > img{
+    width: 100%;
 }
 
 #vagas-titulo{
@@ -252,8 +270,254 @@ body{
     line-height: 44px;
     letter-spacing: -0.02em;
     text-align: center;
+    color: var(--cor-vagasTitulo);
 }
 
 #vagas-descricao{
+    font-family: var(--fonte);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: var(--cor-vagasDescricao);
+}
+
+/* VAGAS ABERTAS*/
+
+#vagas-abertas{
+    left: 80px;
+    padding: 0px 32px 0px 32px;
+}
+
+#vagas-abertas-lista{
+    display: grid;
+    gap: 64px;
+    list-style: none;
+}
+
+.lista-item{
+    display: grid;
+    gap: 32px;
     
+}
+
+.titulo-item{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    color: var(--cor-vagasDescricao2);
+}
+
+.lista-descricao{
+    display: grid;
+    gap: 24px;
+    list-style: none;
+    text-align: left;
+}
+
+.descricao-item{
+    display: grid;
+    padding: 24px 24px 28px 24px;
+    gap: 24px;
+    border-radius: 16px ;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.descricao-item > div{
+    display: flex;
+    gap: 24px;
+}
+
+.descricao-item > div > p, label{
+    margin: 0; padding: 0;
+}
+
+.descricao-titulo{
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: var(--cor-vagasDescricao2);
+}
+
+.descricao-legenda{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: var(--cor-vagasDescricao);
+}
+
+/* DEPOIMENTOS */
+
+#depoimentos{
+    padding: 0 0 96px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#depoimentos-container{
+    height: 404px;
+    padding: 0px 32px 0px 32px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+#depoimentos-artigo{
+    padding: 0 64px;
+    display: grid;
+    gap: 32px;
+    border-radius: 16px;
+}
+
+#depoimentos-titulo{
+    width: 1088px;
+    height: 88px;
+    font-family: var(--fonte);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#artigo-container{
+    width: 1088px; height: 124px;
+    display: grid;
+    gap: 16px;
+}
+
+#artigo-perfil{
+    height: max-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#artigo-perfil > aside{
+    display: grid;
+    gap: 4px;
+}
+
+#artigo-perfil > aside > label{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: var(--cor-vagasTitulo);
+}
+
+#artigo-perfil > aside > span{
+    font-family: var(--fonte);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: var(--cor-vagasDescricao);
+}
+/* FORMULARIO -- RODAPE */
+
+#rodape{
+    padding: 96px 0;
+    display: grid;
+    justify-content: center;
+    gap: 32px;
+}
+
+#rodape-container{
+    padding: 0px 32px 0px 32px;
+    display: grid;
+    gap: 32px;
+    justify-content: center;
+}
+
+#rodape-conteudo{
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+}
+
+#rodape-texto{
+    display: grid;
+    gap: 20px
+}
+
+#rodape-texto > h1{
+    font-family: var(--fonte);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--cor-vagasTitulo);
+}
+
+#rodape-texto > p{
+    font-family: var(--fonte);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: var(--cor-vagasDescricao);
+}
+
+#formulario{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#formulario > #email{
+    width: 360px; height: 24px;
+    padding: 12px 14px 12px 16px;
+    display: flex;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+#formulario > button {
+    width:116px; height: 48px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    background-color: var(--cor-vagaslink);
+    color: white;
+}
+
+#formulario > button > span{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+#rodape-direito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rodape-direito > span{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--cor-vagasDescricao);
 }
