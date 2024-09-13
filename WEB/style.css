@@ -195,7 +195,7 @@
 }
 
 #metrica-lista{
-    height: 192px; width: 1280px;
+    height: 192px; width: 1240px;
     margin: 0; padding: 0 32px;
     display: flex;
     justify-content: space-evenly;
@@ -204,7 +204,7 @@
 }
 
 .item{
-    min-width: 280px; max-width: 300px;
+    min-width: 280px; max-width: 400px;
     height: 168px;
     display: grid;
     gap: 12px;
@@ -357,6 +357,7 @@
 /* DEPOIMENTOS */
 
 #depoimentos{
+    height: 500px;
     padding: 0 0 96px 0;
     display: flex;
     justify-content: center;
@@ -364,7 +365,7 @@
 }
 
 #depoimentos-container{
-    height: 404px;
+    width:1280px; height: 404px;
     padding: 0px 32px 0px 32px;
     display: flex;
     justify-content: center;
